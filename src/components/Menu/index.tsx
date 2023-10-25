@@ -10,6 +10,9 @@ import { Trans } from "@lingui/macro";
 import { CopyToClipboard } from "theme/components";
 import { AWT_MAINNET } from "constants/tokens";
 import MetamaskBtn from "components/MetamaskBtn";
+import { Link } from "react-router-dom";
+
+import * as styles from "./index.css";
 
 const StyledDiv1 = styled.div`
   padding-top: 100px;
@@ -50,18 +53,6 @@ const StyledDiv3 = styled.div`
   }
 `;
 
-const StyledP1 = styled.p`
-  color: ${({ theme }) => theme.primary_text};
-  font-size: 18px;
-  font-weight: 400;
-  padding-right: 100px;
-  @media only screen and (max-width: ${({ theme }) =>
-      `${theme.breakpoint.xxl}px`}) {
-    padding-right: 2vw;
-  }
-  margin: 0;
-`;
-
 const StyledP3 = styled.p`
   color: ${({ theme }) => theme.primary_text};
   text-align: center;
@@ -89,11 +80,11 @@ const Menu = () => {
   return (
     <StyledDiv1>
       <StyledDiv2>
-        <StyledP1>
-          <Trans>Home</Trans>
-        </StyledP1>
+        <Link to={`/`} className={styles.customLinkStyle}>
+            <Trans>Home</Trans>
+        </Link>
         <MenuItem title="Vibe" />
-        <MenuItemMulti title="Blackpaper" />
+        <MenuItemMulti title="Blackpaper" to="/blackpaper" />
         <MenuItem title="MEME Propaganda" />
         <MenuItem title="Audit" />
       </StyledDiv2>

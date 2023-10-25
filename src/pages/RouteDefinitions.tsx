@@ -9,6 +9,7 @@ import { isBrowserRouterEnabled } from "utils/env";
 
 // High-traffic pages (index and /swap) should not be lazy-loaded.
 import Landing from "./Landing";
+import Blackpaper from "./Blackpaper";
 // import Swap from './Swap'
 
 // const NftExplore = lazy(() => import('nft/pages/explore'))
@@ -106,10 +107,18 @@ function createRouteDefinition(
 export const routes: RouteDefinition[] = [
   createRouteDefinition({
     path: "/",
-    getElement: (args) => {
+    getElement: () => {
       /* args.browserRouterEnabled && args.hash ? (
         <Navigate to={args.hash.replace("#", "")} replace />
       ) : **/ return <Landing />;
+    },
+  }),
+  createRouteDefinition({
+    path: "/blackpaper",
+    getElement: () => {
+      /* args.browserRouterEnabled && args.hash ? (
+        <Navigate to={args.hash.replace("#", "")} replace />
+      ) : **/ return <Blackpaper />;
     },
   }),
   // createRouteDefinition({

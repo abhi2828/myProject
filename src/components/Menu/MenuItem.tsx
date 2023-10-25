@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const StyledP = styled.p`
@@ -9,7 +10,17 @@ export const StyledP = styled.p`
   margin: 0;
 `;
 
-const MenuItem = ({ title }: { title: string }) => {
+const MenuItem = ({
+  title,
+  to,
+  href,
+}: {
+  title: string;
+  to?: string;
+  href?: string;
+}) => {
+  if (to) return <Link to={to}>{title}</Link>;
+  if (href) return <a href={href}>{title}</a>
   return <StyledP>{title}</StyledP>;
 };
 

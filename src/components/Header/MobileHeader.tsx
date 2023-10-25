@@ -4,6 +4,7 @@ import { slide as Menu } from "react-burger-menu";
 import header_src from "../../assets/images/awt/header.png";
 import wrappedMenu_src from "../../assets/images/awt/wrappedMenu.png";
 import * as styles from "./Header.css";
+import { Link } from "react-router-dom";
 
 const Flex = styled.div`
   height: 110px;
@@ -61,15 +62,15 @@ const MobileHeader = () => {
   return (
     <>
       <Menu burgerButtonClassName={styles.customBuggerBtnStyle} menuClassName={styles.customMenuStyle}>
-        <a id="home" className={styles.customMenuItemStyle} href="/">
+        <Link id="home" className={styles.customMenuItemStyle} to="/">
           HOME
-        </a>
+        </Link>
         <a id="about" className={styles.customMenuItemStyle} href="/">
           VIBE
         </a>
-        <a id="contact" className={styles.customMenuItemStyle} href="/">
+        <Link id="contact" className={styles.customMenuItemStyle} to="/blackpaper">
           BLACKPAPER
-        </a>
+        </Link>
         <a className={styles.customMenuItemStyle} href="/">
           MEME PROPAGANDA
         </a>
