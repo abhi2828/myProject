@@ -7,12 +7,13 @@ import CustomBtn from "components/Button/CustomBtn";
 
 import right_arrow_src from "../../assets/images/awt/right-arrow.svg";
 import telegram_icon_src from "../../assets/images/awt/telegram_icon.png";
-import cgtrader_src from "../../assets/images/awt/cgtrader.png";
+import twitter_src from "../../assets/images/awt/partners/twitter.png";
 import brand_1_src from "../../assets/images/awt/brands/brand1.png";
 import brand_2_src from "../../assets/images/awt/brands/brand2.png";
 
 import brand_3_src from "../../assets/images/awt/brands/brand3.png";
 import header_src from "../../assets/images/awt/header.png";
+import { TELEGRAM_LINK, TWITTER_LINK } from "constants/contants";
 
 const StyledDiv1 = styled.div`
   display: flex;
@@ -111,6 +112,14 @@ const StyledDiv10 = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+`;
+
+export const StyledA = styled.a`
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
 `;
 
 const StyledP1 = styled.p`
@@ -226,12 +235,17 @@ const StyledImg = styled.img`
   width: 12.34vw;
   max-width: 237px;
 `;
-const StyledImg1 = styled.img<{
+const StyledImg1 = styled.div<{
+  src?:string;
   width?: string;
   height?: string;
   maxWidth?: string;
   maxHeight?: string;
 }>`
+  background-image: ${({src}) => `url(${src})`};
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   width: ${({ width }) => width};
   height: ${({ height }) => height};
   max-width: ${({ maxWidth }) => maxWidth};
@@ -268,7 +282,6 @@ const Header = () => {
             </CustomBtn>
             <StyledImg1
               src={right_arrow_src}
-              alt="right arrow"
               width="1.927vw"
               height="1.563vw"
               maxWidth="37px"
@@ -276,32 +289,48 @@ const Header = () => {
             />
             <StyledImg1
               src={telegram_icon_src}
-              alt="Telegram"
               width="5.781vw"
               height="5.781vw"
               maxWidth="111px"
               maxHeight="111px"
-            />
+            >
+              <StyledA
+                href={TELEGRAM_LINK}
+                target="_blank"
+                rel="noreferrer"
+              ></StyledA>
+            </StyledImg1>
             <StyledImg1
-              src={cgtrader_src}
-              alt="Cross"
+              src={twitter_src}
               width="4.323vw"
               height="4.323vw"
               maxWidth="83px"
               maxHeight="83px"
-            />
+            >
+              <StyledA
+                href={TWITTER_LINK}
+                target="_blank"
+                rel="noreferrer"
+              ></StyledA>
+            </StyledImg1>
           </StyledDiv7>
           <StyledP3>Ourt Partners</StyledP3>
         </StyledDiv3>
-          <StyledDiv8>
-            <StyledImg src={brand_1_src} alt="Brand 1" />
-            <StyledImg src={brand_2_src} alt="Brand 2" />
-            <StyledImg src={brand_3_src} alt="Brand 3" />
-          </StyledDiv8>
+        <StyledDiv8>
+          <StyledImg src={brand_1_src} alt="Brand 1" />
+          <StyledImg src={brand_2_src} alt="Brand 2" />
+          <StyledImg src={brand_3_src} alt="Brand 3" />
+        </StyledDiv8>
       </StyledDiv2>
       <StyledDiv2>
         <StyledDiv9>
-          <StyledDiv10 />
+          <StyledDiv10>
+            {/* <StyledA
+              href={TWITTER_LINK}
+              target="_blank"
+              rel="noreferrer"
+            ></StyledA> */}
+          </StyledDiv10>
         </StyledDiv9>
       </StyledDiv2>
     </StyledDiv1>

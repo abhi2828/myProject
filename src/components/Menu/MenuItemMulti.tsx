@@ -3,6 +3,8 @@ import down_arrow_src from "../../assets/images/awt/down-arrow.svg";
 import { StyledP } from "./MenuItem";
 import { Link } from "react-router-dom";
 
+import * as styles from "./index.css";
+
 const StyledDiv = styled.div`
   display: flex;
   gap: 5px;
@@ -26,7 +28,7 @@ const MenuItemMulti = ({
   if (to)
     return (
       <StyledDiv>
-        <Link to={to}>
+        <Link to={to} className={styles.customMenuItemMultiStyle}>
           <StyledDiv1>
             <StyledP>{title}</StyledP>
             <img src={down_arrow_src} alt="down arrow" className="grayscale" />
@@ -37,7 +39,7 @@ const MenuItemMulti = ({
   if (href)
     return (
       <StyledDiv>
-        <a href={href}>
+        <a href={href} target="_blank" rel="noreferrer">
           <StyledDiv1>
             <StyledP>{title}</StyledP>
             <img src={down_arrow_src} alt="down arrow" className="grayscale" />

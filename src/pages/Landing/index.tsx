@@ -24,11 +24,11 @@ import jesus_src from "../../assets/images/awt/jesus.png";
 import Roadmap from "components/Roadmap";
 import MobileHeader from "components/Header/MobileHeader";
 import MobilePartners from "components/Partners/MobilePartners";
+import { TWITTER_LINK } from "constants/contants";
 
 const StyledDiv = styled.div<{ size?: string }>`
   width: 100vw;
-  background-color: ${({ size }) =>
-    size === "mobile" ? "#F7FFF2" : "#FFFFFF"};
+  background-color: #F7FFF2;
 `;
 
 const StyledDiv1 = styled.div`
@@ -80,6 +80,11 @@ const FullImg = styled.img<{ size?: string }>`
   margin-bottom: ${({ size }) => (size === "mobile" ? "2.67vw" : "7.135vw")};
 `;
 
+const StyledA1 = styled.a`
+  width: 100%;
+  text-decoration: none;
+`
+
 const StyledP = styled.p<{ size?: string }>`
   color: ${({ theme }) => theme.dark};
   text-align: center;
@@ -129,7 +134,6 @@ const Landing = () => {
         <Menu />
         <Header />
         <StyledDiv1>
-          {/* <Steps /> */}
           <Partners />
           <CustomSlider />
         </StyledDiv1>
@@ -142,10 +146,12 @@ const Landing = () => {
           <Projects />
           <Socials />
         </StyledDiv1>
-        <FullImg src={banner_src} alt="Banner" />
+        <StyledA1 href={TWITTER_LINK} target="_blank" rel="noreferrer">
+          <FullImg src={banner_src} alt="Banner" />
+        </StyledA1>
         <StyledDiv1>
           <FlexDiv>
-            <StyledP>THIS WONT MAKE YOU RICH. FIND JESUS</StyledP>
+            <StyledP>THIS WON'T MAKE YOU RICH. FIND JESUS</StyledP>
             <StyledImg src={jesus_src} alt="JESUS" />
           </FlexDiv>
         </StyledDiv1>
@@ -164,7 +170,9 @@ const Landing = () => {
         {/* <Steps /> */}
         <MobilePartners />
         <BrandLogo size="mobile" />
-        <FullImg src={banner_src} alt="Banner" size="mobile" />
+        <StyledA1 href={TWITTER_LINK} target="_blank" rel="noreferrer">
+          <FullImg src={banner_src} alt="Banner" size="mobile" />
+        </StyledA1>
         <Tokenomics size="mobile" />
         <TeamMembers size="mobile" />
         <Roadmap size="mobile" />

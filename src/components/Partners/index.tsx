@@ -5,10 +5,12 @@ import oneInch_src from "../../assets/images/awt/partners/oneInch.png";
 import etherscan_src from "../../assets/images/awt/partners/etherscan.png";
 import coinMarketCap_src from "../../assets/images/awt/partners/coinMarketCap.png";
 import metamask_src from "../../assets/images/awt/wallets/metamask_gray.png";
-import cgtrader_src from "../../assets/images/awt/partners/cgtrader.png";
+import twitter_src from "../../assets/images/awt/partners/twitter.png";
 import uniswap_src from "../../assets/images/awt/partners/uniswap.png";
 import telegram_src from "../../assets/images/awt/partners/telegram.png";
-import copy_src from "../../assets/images/awt/copy.png";
+import { StyledA } from "components/Header";
+import { TELEGRAM_LINK, TWITTER_LINK } from "constants/contants";
+import Metamask from "./Metamask";
 
 const StyledDiv = styled.div<{ size?: string }>`
   width: 100%;
@@ -19,25 +21,6 @@ const StyledDiv = styled.div<{ size?: string }>`
   margin-bottom: ${({ size }) =>
     size === "mobile" ? "5.33vw !important" : "8.33vw"};
   row-gap: 1.56vw;
-`;
-
-const StyledDiv2 = styled.div`
-  width: 423px;
-  height: 160px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  @media only screen and (max-width: ${({ theme }) =>
-      `${theme.breakpoint.xxxl}px`}) {
-    width: 285px;
-    height: 150px;
-  }
-  @media only screen and (max-width: ${({ theme }) =>
-      `${theme.breakpoint.xl}px`}) {
-    width: 200px;
-    height: 105px;
-  }
 `;
 
 const StyledDiv3 = styled.div<{
@@ -67,103 +50,8 @@ const StyledDiv3 = styled.div<{
   }
 `;
 
-const StyleDivMeta = styled.div`
-  width: 423px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 35px;
-  margin-bottom: 20px;
-  @media only screen and (max-width: ${({ theme }) =>
-  `${theme.breakpoint.xxxl}px`}) {
-    width: 300px;
-    gap: 25px;
-  }
-  @media only screen and (max-width: ${({ theme }) =>
-  `${theme.breakpoint.xl}px`}) {
-    width: 200px;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-`;
-
-const StyledP = styled.p`
-  color: ${({ theme }) => theme.primary_text};
-  text-align: center;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-family: "Poppins";
-  font-size: 27px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  margin: 0;
-  @media only screen and (max-width: ${({ theme }) =>
-      `${theme.breakpoint.xxxl}px`}) {
-    font-size: 20px;
-  }
-  @media only screen and (max-width: ${({ theme }) =>
-      `${theme.breakpoint.xl}px`}) {
-    font-size: 15px;
-  }
-`;
-
-const StyledP2 = styled.p`
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 22px;
-  color: ${({ theme }) => theme.primary_text};
-  font-family: "Poppins";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 28px;
-  text-transform: uppercase;
-  margin: 0;
-  @media only screen and (max-width: ${({ theme }) =>
-      `${theme.breakpoint.xxxl}px`}) {
-    font-size: 17px;
-    gap: 14px;
-  }
-  @media only screen and (max-width: ${({ theme }) =>
-      `${theme.breakpoint.xl}px`}) {
-    font-size: 11px;
-    gap: 7px;
-    line-height: 15px;
-  }
-`;
-
 const GrayImg = styled.img`
   filter: grayscale(100%);
-`;
-
-const MetamaskImg = styled.img`
-  width: 119px;
-  height: 113px;
-  @media only screen and (max-width: ${({ theme }) =>
-      `${theme.breakpoint.xxxl}px`}) {
-    width: 70px;
-    height: 65px;
-  }
-  @media only screen and (max-width: ${({ theme }) =>
-      `${theme.breakpoint.xl}px`}) {
-    width: 50px;
-    height: 47px;
-  }
-`;
-const CopyImg = styled.img`
-  width: 73px;
-  height: 73px;
-  @media only screen and (max-width: ${({ theme }) =>
-      `${theme.breakpoint.xxxl}px`}) {
-    width: 40px;
-    height: 40px;
-  }
-  @media only screen and (max-width: ${({ theme }) =>
-      `${theme.breakpoint.xl}px`}) {
-    width: 20px;
-    height: 20px;
-  }
 `;
 
 const partners = [
@@ -191,7 +79,7 @@ const partners = [
     ),
     src: etherscan_src,
     mobile: true,
-    url: "https://etherscan.io/",
+    url: "https://etherscan.io/address/0xd0fa6b71f7f3d56ac09b74d902df3ea2c3aeb5ca",
   },
   {
     name: "CoinMarketCap",
@@ -210,29 +98,18 @@ const partners = [
   {
     name: "Metamask",
     symbol: (
-      <StyledDiv2>
-        <StyleDivMeta>
-          <MetamaskImg src={metamask_src} alt="Metamask" />
-          <StyledP>Add To Metamask</StyledP>
-        </StyleDivMeta>
-        <StyledP2>
-          <span>
-            <CopyImg src={copy_src} alt="Copy" />
-          </span>
-          smart contract address
-        </StyledP2>
-      </StyledDiv2>
+      <Metamask />
     ),
     symbol_mobile: (
       <img src={metamask_src} alt="Metamask" width={50} height={50} />
     ),
   },
   {
-    name: "CgTrader",
-    symbol: <img src={cgtrader_src} alt="CgTrader" width={137} height={129} />,
-    src: cgtrader_src,
+    name: "twitter",
+    symbol: <img src={twitter_src} alt="twitter" width={137} height={129} />,
+    src: twitter_src,
     mobile: true,
-    url: "https://www.coinscreener.ai/",
+    url: TWITTER_LINK,
   },
   {
     name: "Uniswap",
@@ -247,7 +124,7 @@ const partners = [
     symbol_mobile: (
       <img src={telegram_src} alt="Telegram" width={34} height={34} />
     ),
-    url: "https://web.telegram.org/",
+    url: TELEGRAM_LINK,
   },
 ];
 
@@ -274,7 +151,7 @@ const Partners = ({ size }: { size?: string }) => {
         {partners
           .filter((each) => each.mobile)
           .map((each, index) => (
-            <StyledDiv3 size="mobile" key={index} src={each.src} />
+            <StyledDiv3 size="mobile" key={index} src={each.src}><StyledA href={each.url} target="_blank" rel="noreferrer"></StyledA></StyledDiv3>
           ))}
       </StyledDiv>
     );

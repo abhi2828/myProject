@@ -13,6 +13,7 @@ import MetamaskBtn from "components/MetamaskBtn";
 import { Link } from "react-router-dom";
 
 import * as styles from "./index.css";
+import { TELEGRAM_LINK, TWITTER_LINK } from "constants/contants";
 
 const StyledDiv1 = styled.div`
   padding-top: 100px;
@@ -83,9 +84,9 @@ const Menu = () => {
         <Link to={`/`} className={styles.customLinkStyle}>
             <Trans>Home</Trans>
         </Link>
-        <MenuItem title="Vibe" />
+        <MenuItem title="Vibe" href={TELEGRAM_LINK} />
         <MenuItemMulti title="Blackpaper" to="/blackpaper" />
-        <MenuItem title="MEME Propaganda" />
+        <MenuItem title="MEME Propaganda" href={TWITTER_LINK} />
         <MenuItem title="Audit" />
       </StyledDiv2>
       <StyledDiv3>

@@ -13,3 +13,22 @@ export const customLinkStyle = style({
   margin: 0,
   textDecoration: "none",
 });
+
+export const customMenuItemStyle = style({
+  color: "#717579",
+  fontSize: '18px',
+  fontWeight: '500',
+  textTransform: 'uppercase',
+  maxWidth: '190px',
+  margin: 0,
+  textDecoration: "none",
+})
+
+export const customMenuItemMultiStyle=style({
+  color: "#717579",
+  fontSize: '18px',
+  fontWeight: '500',
+  textTransform: 'uppercase',
+  margin: 0,
+  textDecoration: "none",
+})

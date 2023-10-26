@@ -2,7 +2,8 @@
 import styled from "styled-components";
 
 import mail_src from "../../assets/images/awt/mail.svg";
-import cross_src from "../../assets/images/awt/cgtrader.png";
+import twitter_src from "../../assets/images/awt/partners/twitter.png";
+import { TWITTER_LINK } from "constants/contants";
 // import tk_src from "../../assets/images/awt/flags/TK.png";
 // import ru_src from "../../assets/images/awt/flags/RU.png";
 // import ukr_src from "../../assets/images/awt/flags/UKR.png";
@@ -25,11 +26,12 @@ const StyledAlert = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.light};
 `;
 
-const StyledDiv = styled.div`
+const StyledDiv = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  text-decoration: none;
 `;
 
 // const StyledDiv2 = styled.div`
@@ -143,8 +145,8 @@ const Alert = () => {
           ))}
         </StyledDiv3>
       </StyledDiv2> */}
-      <StyledDiv>
-        <img src={cross_src} alt="Cross" width={15} />
+      <StyledDiv href={TWITTER_LINK} target="_blank" rel="noreferrer">
+        <img src={twitter_src} alt="Twitter" width={15} />
         <AlertText>STOP BEING A WOKE CUNT</AlertText>
       </StyledDiv>
     </StyledAlert>

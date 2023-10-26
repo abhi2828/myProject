@@ -4,7 +4,6 @@ import BtnGreen from "components/Button/BtnGreen";
 
 import chevron_src from "../../assets/images/awt/chevron.svg";
 import awt_1_src from "../../assets/images/awt/awt_1.png";
-import telegram_src from "../../assets/images/awt/partners/telegram.png";
 
 const StyledDiv1 = styled.div`
   margin-bottom: 1.35vw;
@@ -85,18 +84,18 @@ const StyledP5 = styled.p`
   margin-bottom: 30px;
   @media only screen and (max-width: ${({ theme }) =>
       `${theme.breakpoint.xxxl}px`}) {
-        font-size: 28px;
-        margin-bottom: 25px;
+    font-size: 28px;
+    margin-bottom: 25px;
   }
   @media only screen and (max-width: ${({ theme }) =>
       `${theme.breakpoint.xxl}px`}) {
-        font-size: 23px;
-        margin-bottom: 20px;
+    font-size: 23px;
+    margin-bottom: 20px;
   }
   @media only screen and (max-width: ${({ theme }) =>
       `${theme.breakpoint.xl}px`}) {
-        font-size: 19px;
-        margin-bottom: 10px;
+    font-size: 19px;
+    margin-bottom: 10px;
   }
 `;
 
@@ -110,18 +109,18 @@ const StyledP6 = styled.p`
   margin-bottom: 48px;
   @media only screen and (max-width: ${({ theme }) =>
       `${theme.breakpoint.xxxl}px`}) {
-        margin-bottom: 40px;
+    margin-bottom: 40px;
   }
   @media only screen and (max-width: ${({ theme }) =>
       `${theme.breakpoint.xxl}px`}) {
-        font-size: 15px;
-        margin-bottom: 30px;
+    font-size: 15px;
+    margin-bottom: 30px;
   }
   @media only screen and (max-width: ${({ theme }) =>
       `${theme.breakpoint.xl}px`}) {
-        font-size: 15px;
-        line-height: normal;
-        margin-bottom: 20px;
+    font-size: 15px;
+    line-height: normal;
+    margin-bottom: 20px;
   }
 `;
 
@@ -142,12 +141,10 @@ const SuccessStory = () => {
   return (
     <StyledDiv1>
       <StyledP1>Token</StyledP1>
-      <StyledP2>
-        This isnt a hate token, its a I’ll say what I want token
-      </StyledP2>
+      <StyledP2>THIS ISNT A HATE TOKEN, ITS A FREEDOM OF SPEECH TOKEN</StyledP2>
       <StyledDiv2>
         <StyledP3>
-          We dont hate, we dont cause violence, jsut wanna say waht we want.
+          We don’t hate, we don’t cause violence, just wanna say what we want.
         </StyledP3>
         <StyledDiv7>
           <BtnGreen>

@@ -5,6 +5,8 @@ import header_src from "../../assets/images/awt/header.png";
 import wrappedMenu_src from "../../assets/images/awt/wrappedMenu.png";
 import * as styles from "./Header.css";
 import { Link } from "react-router-dom";
+import { TELEGRAM_LINK, TWITTER_LINK } from "constants/contants";
+import { StyledA } from ".";
 
 const Flex = styled.div`
   height: 110px;
@@ -15,8 +17,9 @@ const Flex = styled.div`
   padding: 2.5vw;
 `;
 
-const RelativeDiv = styled.div`
+const RelativeA = styled.a`
   position: relative;
+  text-decoration: none;
 `;
 
 const StyledImg = styled.div<{ src: string }>`
@@ -61,29 +64,51 @@ const PaddingDiv = styled.div`
 const MobileHeader = () => {
   return (
     <>
-      <Menu burgerButtonClassName={styles.customBuggerBtnStyle} menuClassName={styles.customMenuStyle}>
+      <Menu
+        burgerButtonClassName={styles.customBuggerBtnStyle}
+        menuClassName={styles.customMenuStyle}
+      >
         <Link id="home" className={styles.customMenuItemStyle} to="/">
           HOME
         </Link>
-        <a id="about" className={styles.customMenuItemStyle} href="/">
+        <a
+          id="about"
+          className={styles.customMenuItemStyle}
+          href={TELEGRAM_LINK}
+          target="_blank"
+          rel="noreferrer"
+        >
           VIBE
         </a>
-        <Link id="contact" className={styles.customMenuItemStyle} to="/blackpaper">
+        <Link
+          id="contact"
+          className={styles.customMenuItemStyle}
+          to="/blackpaper"
+        >
           BLACKPAPER
         </Link>
-        <a className={styles.customMenuItemStyle} href="/">
+        <a
+          className={styles.customMenuItemStyle}
+          href={TWITTER_LINK}
+          target="_blank"
+          rel="noreferrer"
+        >
           MEME PROPAGANDA
         </a>
-        <a className={styles.customMenuItemStyle} href="/">
-          AUDIT
-        </a>
+        <div className={styles.customMenuItemStyle}>AUDIT</div>
       </Menu>
       <Flex>
-        <StyledImg src={header_src} />
-        <RelativeDiv>
+        <StyledImg src={header_src}>
+          <StyledA
+            href={TWITTER_LINK}
+            target="_blank"
+            rel="noreferrer"
+          ></StyledA>
+        </StyledImg>
+        <RelativeA href={TWITTER_LINK} target="_blank" rel="noreferrer">
           <StyledP>$AWT</StyledP>
           <StyledP1>STOP BEING A WOKE CUNT</StyledP1>
-        </RelativeDiv>
+        </RelativeA>
         <PaddingDiv>
           <img
             src={wrappedMenu_src}

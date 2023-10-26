@@ -8,13 +8,14 @@ import styled from "styled-components";
 // import soundcloud_src from "../../assets/images/awt/socials/soundcloud.png";
 // import vimeo_src from "../../assets/images/awt/socials/vimeo.png";
 import telegram_src from "../../assets/images/awt/socials/telegram.png";
-import cgtrader_src from "../../assets/images/awt/partners/cgtrader.png";
+import twitter_src from "../../assets/images/awt/partners/twitter.png";
 // import tiktok_src from "../../assets/images/awt/socials/tiktok.png";
 // import spotify_src from "../../assets/images/awt/socials/spotify.png";
 // import pinterest_src from "../../assets/images/awt/socials/pinterest.png";
 // import shazam_src from "../../assets/images/awt/socials/shazam.png";
 // import google_src from "../../assets/images/awt/socials/google.png";
 import etherscan_src from "../../assets/images/awt/partners/etherscan.png";
+import { TELEGRAM_LINK, TWITTER_LINK } from "constants/contants";
 
 const StyledDiv = styled.div<{ size?: string }>`
   display: flex;
@@ -106,17 +107,17 @@ const partners = [
   {
     name: "Telegram",
     symbol: telegram_src,
-    url: "https://web.telegram.org/",
+    url: TELEGRAM_LINK,
   },
   {
-    name: "CGTrader",
-    symbol: cgtrader_src,
-    url: "https://www.cgtrader.com/",
+    name: "twitter",
+    symbol: twitter_src,
+    url: TWITTER_LINK,
   },
   {
     name: "etherscan",
     symbol: etherscan_src,
-    url: "https://etherscan.io/",
+    url: "https://etherscan.io/address/0xd0fa6b71f7f3d56ac09b74d902df3ea2c3aeb5ca",
   },
   // {
   //   name: "TikTok",

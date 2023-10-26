@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+import * as styles from "./index.css";
+
 export const StyledP = styled.p`
   color: ${({ theme }) => theme.secondary_text};
   font-size: 18px;
@@ -19,8 +21,23 @@ const MenuItem = ({
   to?: string;
   href?: string;
 }) => {
-  if (to) return <Link to={to}>{title}</Link>;
-  if (href) return <a href={href}>{title}</a>
+  if (to)
+    return (
+      <Link to={to} className={styles.customMenuItemStyle}>
+        {title}
+      </Link>
+    );
+  if (href)
+    return (
+      <a
+        href={href}
+        className={styles.customMenuItemStyle}
+        target="_blank"
+        rel="noreferrer"
+      >
+        {title}
+      </a>
+    );
   return <StyledP>{title}</StyledP>;
 };
 
