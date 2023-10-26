@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 import project_1_src from "../../assets/images/awt/projects/project_1.png";
 import project_2_src from "../../assets/images/awt/projects/project_2.png";
-import project_3_src from "../../assets/images/awt/projects/project_3.png";
-import project_4_src from "../../assets/images/awt/projects/project_4.png";
+import project_3_src from "../../assets/images/awt/funding/img3.png";
+import project_4_src from "../../assets/images/awt/funding/img4.png";
 import avatar_1_src from "../../assets/images/awt/projects/avatar_1.png";
 import avatar_2_src from "../../assets/images/awt/projects/avatar_2.png";
 import avatar_3_src from "../../assets/images/awt/projects/avatar_3.png";

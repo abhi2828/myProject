@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import awt_src from "../../assets/images/awt/awt.png";
-import blackguy_src from "../../assets/images/awt/blackguy.png";
+import blackguy_src from "../../assets/images/awt/blackguy.svg";
 
 const FlexDiv = styled.div`
   display: flex;

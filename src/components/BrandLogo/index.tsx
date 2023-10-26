@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import brand_1_src from "../../assets/images/awt/brands/brand1.png";
+import brand_1_src from "../../assets/images/awt/partners1.png";
 import brand_2_src from "../../assets/images/awt/brands/brand2.png";
 import brand_3_src from "../../assets/images/awt/brands/brand3.png";
-import brand_4_src from "../../assets/images/awt/brands/brand4.png";
-import brand_5_src from "../../assets/images/awt/brands/brand5.png";
+import brand_4_src from "../../assets/images/awt/partners4.png";
+import brand_5_src from "../../assets/images/awt/partners5.png";
 import { useIsMobile, useIsTablet } from "nft/hooks";
 
 const StyledDiv1 = styled.div<{ size?: string }>`
@@ -85,8 +85,8 @@ const BrandLogo = ({ size }: { size?: string }) => {
         <StyledP>Our Partners</StyledP>
         <StyledDiv2>
           <StyledImgDiv1 src={brand_1_src} />
-          <StyledImgDiv1 src={brand_2_src} />
           <StyledImgDiv1 src={brand_3_src} />
+          <StyledImgDiv1 src={brand_2_src} />
           <StyledImgDiv1 src={brand_4_src} />
           <StyledImgDiv1 src={brand_5_src} />
         </StyledDiv2>

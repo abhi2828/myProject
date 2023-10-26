@@ -8,10 +8,9 @@ import CustomBtn from "components/Button/CustomBtn";
 import right_arrow_src from "../../assets/images/awt/right-arrow.svg";
 import telegram_icon_src from "../../assets/images/awt/telegram_icon.png";
 import twitter_src from "../../assets/images/awt/partners/twitter.png";
-import brand_1_src from "../../assets/images/awt/brands/brand1.png";
-import brand_2_src from "../../assets/images/awt/brands/brand2.png";
-
-import brand_3_src from "../../assets/images/awt/brands/brand3.png";
+import brand_1_src from "../../assets/images/awt/partners1.png";
+import brand_2_src from "../../assets/images/awt/partners2.png";
+import brand_3_src from "../../assets/images/awt/partners3.png";
 import header_src from "../../assets/images/awt/header.png";
 import { TELEGRAM_LINK, TWITTER_LINK } from "constants/contants";
 

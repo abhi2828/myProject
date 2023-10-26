@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { useIsMobile, useIsTablet } from "nft/hooks";
 
-import one_src from "../../assets/images/awt/teammembers/1.png";
-import two_src from "../../assets/images/awt/teammembers/2.png";
-import three_src from "../../assets/images/awt/teammembers/3.png";
-import four_src from "../../assets/images/awt/teammembers/4.png";
-import block_src from "../../assets/images/awt/block.png";
+import one_src from "../../assets/images/awt/LiberalCrybabies.png";
+import two_src from "../../assets/images/awt/two_src.png";
+import three_src from "../../assets/images/awt/three_src.png";
+import four_src from "../../assets/images/awt/four_src.png";
+import block_src from "../../assets/images/awt/three2_src.png";
 
 const StyledDiv1 = styled.div<{ size?: string }>`
   display: flex;
